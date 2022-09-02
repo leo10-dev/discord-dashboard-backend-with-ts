@@ -1,5 +1,5 @@
+import {config} from 'dotenv'
 import express , {Express} from 'express'
-import {config}  from 'dotenv'
 import { createApp} from './utils/createApp'
 config();
 
