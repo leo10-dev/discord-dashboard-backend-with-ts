@@ -4,6 +4,7 @@ import cors from 'cors';
 import session from 'express-session';
 import passport from 'passport';
 import routes from '../routes';
+import store from 'connect-mongo'
 
 
 config();
@@ -25,7 +26,9 @@ export function createApp(): Express {
       resave: false,
       saveUninitialized: false,
       cookie: { maxAge: 60000 * 60 * 24 * 7 },
-     
+      store : store.create({
+        mongoUrl : 'mongodb+srv://azizsystem:azizbot123@discord-bot.3ow8b.mongodb.net/test'})
+    
     })
   );
 

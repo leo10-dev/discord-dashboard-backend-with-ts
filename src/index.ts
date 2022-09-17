@@ -1,10 +1,11 @@
 import {config} from 'dotenv'
 import express , {Express} from 'express'
 import { createApp} from './utils/createApp'
+import './database'
 config();
 
 import routes from './routes'
-const PORT = process.env.PORT  || 3001;
+const PORT = process.env.PORT  || 5001;
 
 
 
